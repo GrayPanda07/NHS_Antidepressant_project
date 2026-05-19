@@ -1,76 +1,154 @@
-# NHS Step Up Challenge A – R Analysis
+# NHS Step Up Challenge A – Python Analysis
 
-This folder contains the R implementation of the NHS Step Up Challenge A project.
+This folder contains the Python implementation of the NHS Step Up Challenge A project, including the full analytical script and presentation.
 
-The project focuses on analysing NHS antidepressant prescribing data using R for data cleaning, aggregation, exploratory analysis, and visualisation.
+The project focuses on analysing NHS antidepressant prescribing data using Python for data cleaning, aggregation, exploratory analysis, and data visualisation.
+
+---
+
+# Folder Contents
+
+```text
+nhs_challengea_python.py
+NHS_ChallengeA_Python.pptx
+README.md
+```
 
 ---
 
 # Project Overview
 
-The analysis investigates prescribing trends across NHS regions, focusing on:
+This project analysed NHS antidepressant prescribing data from December 2024 across England.
 
-- Prescription volumes
-- Drug costs
-- Regional prescribing differences
-- Most prescribed antidepressants
-- Cost analysis by region and drug type
+The analysis explored:
 
-The project demonstrates core data analytics workflows commonly used in healthcare and pharmaceutical analysis.
+- Prescribing trends
+- Regional variation
+- Prescription volume
+- Medication costs
+- Differences between prescribing frequency and expenditure
+
+The project demonstrates healthcare data analysis workflows commonly used in NHS, pharmaceutical, and healthcare analytics environments.
 
 ---
 
-# File Information
+# Files Included
 
-## Main Script
-`NHS_ChallengeA_R.R`
+## 1. nhs_challengea_python.py
 
-## Language
-R
+The main Python analysis script containing:
 
-## Project Type
-Healthcare Data Analysis
+- Data cleaning
+- Exploratory data analysis
+- Aggregation
+- Pivot table analysis
+- Statistical summaries
+- Data visualisation using matplotlib
+
+The script was originally developed in Google Colab.
+
+---
+
+## 2. NHS_ChallengeA_Python.pptx
+
+PowerPoint presentation summarising:
+
+- Project aims
+- Data cleaning process
+- Key analytical findings
+- Visualisations
+- Recommendations
+- Final conclusions
+
+The presentation was designed for a non-technical audience.
+
+---
+
+# Dataset Information
+
+The analysis used NHS antidepressant prescribing data from December 2024.
+
+## Dataset Summary
+
+- 1,120 rows
+- 6 columns
+- 27 antidepressants analysed
+- 8 NHS regions included
+
+---
+
+# Project Aims
+
+The project aimed to:
+
+- Identify the most prescribed antidepressants
+- Compare prescribing volume and cost
+- Explore regional prescribing differences
+- Generate insights using NHS healthcare data
 
 ---
 
 # Analysis Tasks Completed
 
-The R script performs:
-
 ## Data Import
-- Reads Excel datasets using `readxl`
-
-## Data Inspection
-- Dataset structure checks
-- Summary statistics
-- Missing value analysis
-- Unique value exploration
+- Imported Excel datasets using pandas
 
 ## Data Cleaning
-- Removes duplicate records
-- Removes missing values
-- Converts numerical columns to correct data types
+- Removed duplicate records
+- Checked for missing values
+- Converted prescribing columns into numeric format
+- Verified drug and regional categories
+- Confirmed data types were correct
 
 ## Data Aggregation
-- Top prescribed antidepressants
-- National cost calculations
-- Regional prescribing analysis
-- Total prescription calculations
+- Calculated national prescribing totals
+- Compared prescribing costs
+- Analysed regional prescribing patterns
+- Investigated Integrated Care Board (ICB) variation
 
 ## Data Visualisation
-- Bar charts
-- Regional comparisons
-- Cost visualisations
-- Prescription trend graphics
+- Created professional charts using matplotlib
+- Built prescribing comparison graphics
+- Developed regional analysis charts
+- Applied NHS-inspired colour palettes
+
+---
+
+# Key Findings
+
+## Prescribing Volume
+- Sertraline hydrochloride was the most prescribed antidepressant
+- Amitriptyline ranked second nationally
+- Prescription volumes were concentrated among a small number of medications
+
+## Cost Analysis
+- Venlafaxine showed the highest prescribing cost
+- Higher prescription volume did not always mean higher cost
+- Some lower-volume medications were significantly more expensive
+
+## Regional Analysis
+- North East and Yorkshire showed the highest prescribing volume
+- Midlands showed the highest prescribing costs
+- London recorded lower prescribing totals
+
+---
+
+# Technologies Used
+
+- Python
+- Google Colab
+- pandas
+- numpy
+- matplotlib
 
 ---
 
 # Libraries Used
 
-```r
-library(readxl)
-library(tidyverse)
-library(scales)
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 
 ---
@@ -79,108 +157,74 @@ library(scales)
 
 Install required packages before running the script:
 
-```r
-install.packages("readxl")
-install.packages("tidyverse")
-install.packages("scales")
+```python
+pip install pandas
+pip install numpy
+pip install matplotlib
+pip install openpyxl
 ```
-
----
-
-# Dataset Used
-
-The script uses:
-
-```text
-Step Up Excel Data Dec 2024.xlsx
-```
-
-The dataset contains NHS antidepressant prescribing information including:
-
-- Drug names
-- Prescription item counts
-- Actual prescribing costs
-- NHS regional information
-- ICB data
-
----
-
-# Key Features of the Analysis
-
-## Prescribing Analysis
-- Identifies the most prescribed antidepressants
-- Compares prescribing volumes across NHS regions
-
-## Cost Analysis
-- Calculates national and regional medication costs
-- Investigates prescribing expenditure patterns
-
-## Data Visualisation
-- Produces professional healthcare-focused charts using ggplot2
-- Applies NHS-inspired colour palettes
-
----
-
-# Example Questions Answered
-
-The analysis explores questions such as:
-
-- Which antidepressants are prescribed most frequently?
-- What is the national cost of Mirtazapine?
-- How much is spent on Sertraline in different NHS regions?
-- Which regions have the highest prescribing activity?
-
----
-
-# Visualisation Features
-
-The project includes:
-
-- Horizontal bar charts
-- Regional cost comparisons
-- Prescription frequency charts
-- NHS-style colour themes
-
-NHS-inspired colour palette used:
-
-- NHS Blue
-- NHS Dark Blue
-- NHS Light Blue
-- NHS Aqua
-- NHS Grey
-
----
-
-# Technologies Used
-
-- R
-- RStudio
-- tidyverse
-- ggplot2
-- readxl
-- scales
 
 ---
 
 # Skills Demonstrated
 
+- Healthcare analytics
 - Data cleaning
 - Exploratory data analysis
-- Healthcare analytics
+- Data aggregation
+- Pivot table analysis
 - Data visualisation
-- Statistical summarisation
-- R programming
-- Data wrangling using tidyverse
-- Professional reporting workflows
+- Python programming
+- Healthcare reporting
+- Presentation design
+- Communication of insights to non-technical audiences
+
+---
+
+# Charts Created
+
+The project includes visualisations such as:
+
+- Top prescribed antidepressants
+- Prescribing cost comparisons
+- Regional prescribing analysis
+- Cost by medication
+- Prescription volume by region
+- Sertraline regional cost analysis
 
 ---
 
 # How To Run
 
-1. Open the `.R` file in RStudio
-2. Ensure the Excel dataset is in the same folder
+1. Open the Python script in Google Colab, Jupyter Notebook, or VS Code
+2. Ensure the Excel dataset is available
 3. Install required packages
 4. Run the script section-by-section or run all
+
+---
+
+# Presentation Highlights
+
+The presentation includes:
+
+- Introduction & project aims
+- Data cleaning workflow
+- Top antidepressant analysis
+- Prescribing volume analysis
+- Cost analysis
+- Regional comparisons
+- Recommendations
+- Final conclusions
+
+---
+
+# Recommendations From The Analysis
+
+- Continue monitoring antidepressant prescribing trends
+- Investigate regional prescribing differences
+- Support early mental health intervention services
+- Improve healthcare resource planning
+- Explore opportunities for cost-effective prescribing
 
 ---
 
@@ -200,13 +244,14 @@ Mathematics Graduate
 Data Analytics & Data Science Portfolio
 
 Technical Skills:
-- R
 - Python
+- R
 - SQL
 - Excel
 - Power BI
-- ggplot2
-- tidyverse
+- pandas
+- matplotlib
+- NumPy
 
 LinkedIn:
 https://www.linkedin.com/in/alexandria-noikovitch/
@@ -215,6 +260,12 @@ https://www.linkedin.com/in/alexandria-noikovitch/
 
 # Notes
 
-This repository demonstrates healthcare data analysis workflows using R and tidyverse tools.
+This project demonstrates healthcare data analysis workflows using Python and common data science libraries.
 
-The project was designed to showcase practical analytical skills relevant to healthcare analytics, pharmaceutical analytics, and business intelligence roles.
+The analysis showcases practical analytical skills relevant to:
+
+- Healthcare Analytics
+- Pharmaceutical Analytics
+- NHS Data Analysis
+- Business Intelligence
+- Data Visualisation & Reporting
